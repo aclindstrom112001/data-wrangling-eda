@@ -19,23 +19,15 @@ The dataset contains information about passengers on the Titanic, including demo
 
 **Variables:**
 
-| Column        | Description |
-|---------------|-------------|
-| survived      | Survival status (0 = No, 1 = Yes) |
-| pclass        | Passenger class (1 = 1st, 2 = 2nd, 3 = 3rd) |
-| sex           | Gender (M/F) |
-| age           | Age in years |
-| sibsp         | Number of siblings/spouses aboard |
-| parch         | Number of parents/children aboard |
-| fare          | Passenger fare |
-| embarked      | Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton) |
-| class         | Passenger class as string (First, Second, Third) |
-| who           | Person type (man, woman, child) |
-| adult_male    | Boolean flag for adult male |
-| deck          | Deck level (A–G, NaN if unknown) |
-| embark_town   | Town of embarkation |
-| alive         | Survival status as string (yes/no) |
-| alone         | Boolean flag if traveling alone |
+| Column            | Description |
+|------------------|-------------|
+| Survived          | Survival status (0 = No, 1 = Yes) |
+| Class             | Passenger class (1 = 1st, 2 = 2nd, 3 = 3rd) |
+| Sex               | Gender (M/F) |
+| Age               | Age in years (missing values filled via random imputation + median) |
+| SiblingsSpouses   | Number of siblings/spouses aboard |
+| ParentsChildren   | Number of parents/children aboard |
+| Fare              | Passenger fare |
 
 **Note:** The dataset has been cleaned in this project:
 - Missing values for `age` were filled using random imputation from a normal distribution (10%) and median imputation.  
