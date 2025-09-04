@@ -12,7 +12,7 @@ DSE 511 - Fall 2025
 ## Methods
 ### Data Cleaning (Cooper)
 
-**Steps taaken to clean the dataset:**
+**Steps taken to clean the dataset:**
 
 1. Inspected the dataset to determine what varaibles had missing values
 2. Since majority of the varaible Deck had missing values I decided to remove the variable
