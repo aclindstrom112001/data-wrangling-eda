@@ -59,7 +59,7 @@ Class 3: 491
 
 
 
-![Tickets Price Distribution]("price distribution.png")
+![Tickets Price Distribution](price_distribution.png)
 
 **Gender and Family Distribution:** 
 Male: 577, Female: 314
@@ -76,10 +76,10 @@ Number of Parents and Children: 340
 | 75%   | 35.000000 |
 | max   | 80.000000 |
 
-![Age Distribution]("age distribution.png")
+![Age Distribution](age_distribution.png)
 
 **Correlation Matrix:** 
-![Correlation Matrix]("Correlation Matrix.png.png")
+![Correlation Matrix](Correlation_Matrix.png.png)
 
 **PCA:** 
 PCA computations showed that: 
@@ -89,7 +89,7 @@ PCA computations showed that:
 **Features that impact the chance of survival on the Titanic** 
 Mutual Information and Tree based feature impartances show that Gender, Age, and Tickets Price are the feature that impacts the most the chance of Survival
 
-![Features Importances]("feature importances.png")
+![Features Importances](feature_importances.png)
 
 
 ## Results
