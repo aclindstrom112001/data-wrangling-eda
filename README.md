@@ -80,7 +80,7 @@ Number of Parents and Children: 340
 
 **Correlation Matrix:** 
 
-![Correlation Matrix](Correlation_Matrix.png.png)
+![Correlation Matrix](Correlation_Matrix.png)
 
 **PCA:** 
 PCA computations showed that: 
