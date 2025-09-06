@@ -79,6 +79,7 @@ Number of Parents and Children: 340
 ![Age Distribution](age_distribution.png)
 
 **Correlation Matrix:** 
+
 ![Correlation Matrix](Correlation_Matrix.png.png)
 
 **PCA:** 
