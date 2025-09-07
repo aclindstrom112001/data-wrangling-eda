@@ -112,7 +112,8 @@ Analysis of the Titanic dataset focusing on data cleaning, exploratory data anal
 
 ---
 
-**Principal Component Analysis (PCA):** 
+**Principal Component Analysis (PCA):**
+
 PCA computations showed that: 
  - Ticket Price holds 93% of the variance
  - Age holds 6.5% of the variance
@@ -120,7 +121,7 @@ This suggests that most of the variability in the dataset can be explained by ti
 
 ---
 
-**Features that impact the chance of survival on the Titanic** 
+**Feature Importance for Survival:**
 Using Mutual Information and tree-based feature importance, the variables that most influence the probability of survival are:
 - Gender
 - Age
