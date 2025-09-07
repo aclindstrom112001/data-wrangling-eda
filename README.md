@@ -122,6 +122,7 @@ This suggests that most of the variability in the dataset can be explained by ti
 ---
 
 **Feature Importance for Survival:**
+
 Using Mutual Information and tree-based feature importance, the variables that most influence the probability of survival are:
 - Gender
 - Age
