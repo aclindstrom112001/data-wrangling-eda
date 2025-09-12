@@ -193,3 +193,4 @@ np.random.seed(42)
 
 ## Merge Conflict Reflection
 Briefly describe the merge conflict you created and how you resolved it.
+Cooper was here
