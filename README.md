@@ -63,7 +63,7 @@ Analysis of the Titanic dataset focusing on data cleaning, exploratory data anal
 
 **Observations:**
 - Class 3 has the largest number of passengers, reflecting the overall passenger composition.
-- Ticket prices are heavily right-skewed, especially after inflation adjustment, with a few passengers paying very high fares.
+- Ticket prices are heavily right-skewed with a few passengers paying very high fares. 
 - The median fares indicate that most passengers paid significantly less than the maximum fares, highlighting economic disparities.
 
 ---
@@ -107,6 +107,7 @@ Analysis of the Titanic dataset focusing on data cleaning, exploratory data anal
 **Observations:**
 - Strong correlations exist between SiblingsSpouses and ParentsChildren, suggesting that family groups often traveled together.
 - Fare is moderately correlated with Class, reflecting higher prices for higher classes.
+- Sex is strongly correlated with Survival, showing that gender played an important role in whether someone survived
 - Other variables show weak correlations, indicating mostly independent features.
 
 ---
@@ -130,7 +131,7 @@ Using Mutual Information and tree-based feature importance, the variables that m
 ![Features Importances](pictures/feature_importances.png)
 
 **Observations:**
-- Gender is the most significant predictor of survival, reflecting historical accounts of the “women and children first” policy.
+- Gender is the most significant predictor of survival, reflecting historical accounts of the “women and children first” policy. 81% of men died during the accident compared to 26% of women. 
 - Age and Ticket Price also play important roles, indicating that younger passengers and those in higher ticket classes had higher survival chances.
 
 ---
