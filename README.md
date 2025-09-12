@@ -1,25 +1,25 @@
-
-# Titanic Data Wrangling & EDA Project
+ # Titanic Data Wrangling & EDA Project
 Homework #3: Collaborative Data Wrangling & EDA 
 DSE 511 - Fall 2025
 
-## Dataset Information
+Analysis of the Titanic dataset focusing on data cleaning, exploratory data analysis, PCA, and feature importance for survival prediction.
 
+## Dataset Information
 **Source:** [Titanic dataset from Seaborn](https://github.com/mwaskom/seaborn-data/blob/master/titanic.csv)
 **Date Accessed:** September 5, 2025
-**Size:** 55.7 kb, 892 rows
+**Size:** 55.7 kb, 892 rows, 12 columns
+
+---
 
 ## Methods
 ### Data Cleaning (Cooper)
-
 **Steps taken to clean the dataset:**
-
-1. Inspected the dataset to determine what varaibles had missing values
-2. Since majority of the varaible Deck had missing values I decided to remove the variable
-3. Filled the 2 missing values from the variable Embarked with the mode of the values
-4. Used random distribution to fill the missing values for age
-5. Standarized the variable Sex with 'M' and 'F' values
-6. Cleaned and chose the variables useful for analysis
+1. Inspected the dataset to identify variables with missing values.
+2. Removed the Deck variable due to a majority of missing values.
+3. Filled the two missing values in Embarked with the mode of the variable.
+4. Imputed missing values in Age using a random distribution around the median.
+5. Standardized the Sex variable to 'M' and 'F'.
+6. Selected and retained variables relevant for analysis.
 
 **Variables:**
 
@@ -34,18 +34,20 @@ DSE 511 - Fall 2025
 | Fare              | Passenger fare |
 
 **Tools/libraries used:** 
+- NumPy – Used for random distribution imputation for Age.
+- Pandas – For data manipulation.
+- Seaborn and Matplotlib – For data visualization.
+- scikit-learn – For PCA, mutual information, and random forest computations.
 
-numpy was utilized for the random distribution to fill the values in the varible Age
-pandas was utilized for data manipulation
-seaborn and matplotlib were used for data vizualisation
-sklearn was used to compute PCA, mutual information, and random forest
+---
 
-
-### Exploratory Data Analsis (Amine)
+### Exploratory Data Analysis (Amine)
 **Ticket classes distribution:** 
-Class 1: 216
-Class 2: 184
-Class 3: 491
+- Class 1: 216 passengers
+- Class 2: 184 passengers
+- Class 3: 491 passengers
+
+**Fare Statistics:**
 
 |       | Price (1912) | Adjusted Price (2025, inflation-adjusted) |
 |-------|--------------|-------------------------------------------|
@@ -57,15 +59,28 @@ Class 3: 491
 | 75%   | 31           | 1012.87                                   |
 | max   | 512.32       | 16739.46                                  |
 
+![Tickets Price Distribution](pictures/price_distribution.png)
 
+**Observations:**
+- Class 3 has the largest number of passengers, reflecting the overall passenger composition.
+- Ticket prices are heavily right-skewed, especially after inflation adjustment, with a few passengers paying very high fares.
+- The median fares indicate that most passengers paid significantly less than the maximum fares, highlighting economic disparities.
 
-![Tickets Price Distribution](price_distribution.png)
+---
 
 **Gender and Family Distribution:** 
-Male: 577, Female: 314
-Number of Parents and Children: 340
+- Male: 577 passengers
+- Female: 314 passengers
+- Number of Parents and Children: 340
 
-**Age Distribution:** 
+**Observations:**
+- The passenger population is predominantly male.
+- A substantial portion of passengers were traveling with family (parents and children), which could influence survival and other analyses.
+
+---
+
+**Age Distribution:**
+
 |       | Age       |
 |-------|-----------|
 | mean  | 29.294284 |
@@ -76,47 +91,104 @@ Number of Parents and Children: 340
 | 75%   | 35.000000 |
 | max   | 80.000000 |
 
-![Age Distribution](age_distribution.png)
+![Age Distribution](pictures/age_distribution.png)
+
+**Observations:**
+- The passenger age ranges from newborns to 80 years old.
+- The median age is 28, indicating a relatively young passenger population.
+- The distribution is slightly right-skewed, with a few older passengers influencing the mean.
+
+---
 
 **Correlation Matrix:** 
 
-![Correlation Matrix](Correlation_Matrix.png)
+![Correlation Matrix](pictures/Correlation_Matrix.png)
 
-**PCA:** 
+**Observations:**
+- Strong correlations exist between SiblingsSpouses and ParentsChildren, suggesting that family groups often traveled together.
+- Fare is moderately correlated with Class, reflecting higher prices for higher classes.
+- Other variables show weak correlations, indicating mostly independent features.
+
+---
+
+**Principal Component Analysis (PCA):**
+
 PCA computations showed that: 
- - Tickets Price holds 93% of the variance
+ - Ticket Price holds 93% of the variance
  - Age holds 6.5% of the variance
+This suggests that most of the variability in the dataset can be explained by ticket price, with age contributing a smaller portion.
 
-**Features that impact the chance of survival on the Titanic** 
-Mutual Information and Tree based feature impartances show that Gender, Age, and Tickets Price are the feature that impacts the most the chance of Survival
+---
 
-![Features Importances](feature_importances.png)
+**Feature Importance for Survival:**
 
+Using Mutual Information and tree-based feature importance, the variables that most influence the probability of survival are:
+- Gender
+- Age
+- Ticket Price
+
+![Features Importances](pictures/feature_importances.png)
+
+**Observations:**
+- Gender is the most significant predictor of survival, reflecting historical accounts of the “women and children first” policy.
+- Age and Ticket Price also play important roles, indicating that younger passengers and those in higher ticket classes had higher survival chances.
+
+---
 
 ## Results
-Since a lot of features are categorical, it was expected that Ticket Price and Age holds 99% of the variance and are among the most impactful features. The fact that Gender is a key feature to the survival chance may be due to the unbalance distribution between Male and Female on board and the large amount of kids. 
 
-Overall the chance of survival on the Titanic is 38%. 
+Exploratory data analysis revealed that ticket price and age captured the majority of variance in the dataset, reflecting their importance as numerical features. Gender also emerged as a key predictor of survival, likely influenced by the uneven distribution of males and females on board as well as the number of children. 
+
+Overall, the chance of survival on the Titanic was approximately 38%.
+
+**Reflection:**  
+It was notable that socioeconomic factors, such as ticket price, strongly influenced survival, and that historical patterns like “women and children first” are clearly reflected in the data.
+
+---
 
 ## Collaboration Notes
-Partner A contributions: [e.g., data cleaning, repo setup]
+**Partner A (Cooper):** 
+- Repository Setup
+- Data Cleaning
+- README formatting and editing
 
-Partner B contributions, Amine Turki: 
- - EDA
- - Features Correlations computation
+**Partner B (Amine):** 
+- Exploratory data analysis (EDA)  
+- Feature correlations computation
 
+**Both:** 
+- Documentation
+- Merge conflict resolution
 
-Both: [e.g., documentation, merge conflict resolution]
-branch feature-cooper: data cleaning
-branche amine-eda: EDA
+**Branches:**
+- 'feature-cooper': Data cleaning
+- 'amine-eda': EDA
+
+---
 
 ## Reproducibility Instructions
-python 3.10 used
 
-Dependencies
+**Python Version:**  
+- Python 3.10
 
+**How to Run:**  
+1. Open Jupyter Lab or Jupyter Notebook.
+2. Navigate to the `notebooks/` folder.
+3. Open `eda_cooper.ipynb`.
+4. Run all cells sequentially from top to bottom.  
+
+**Dependencies:**  
+Install required packages using the provided `requirements.txt`:  
 ```bash
 pip install -r requirements.txt
+```
+**Special Instructions:**
+- Make sure all images referenced in the notebook (e.g., pictures/price_distribution.png, pictures/Correlation_Matrix.png) are in the pictures/ folder relative to the notebook.
+- Ensure the dataset (titanic.csv) is located in the same directory as the notebook or update the file path in the notebook accordingly.
+- To reproduce the random imputations for missing Age values and PCA results, set a random seed in the notebook, e.g.:
+```python
+import numpy as np
+np.random.seed(42)
 ```
 
 ## Merge Conflict Reflection
