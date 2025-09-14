@@ -193,5 +193,8 @@ np.random.seed(42)
 ```
 
 ## Merge Conflict Reflection
-Briefly describe the merge conflict you created and how you resolved it.
-Cooper was here
+We intentionally created a merge conflict in the README.md file by both editing in seperate branches. 
+When merging, Git flagged the conflicting lines with conflict markers (<<<<<<<, =======, >>>>>>>).
+To resolve it, we manually edited the README so that both partners’ changes were incorporated into a single, unified introduction. 
+After saving the file, we staged the changes, committed with a message like “Resolve merge conflict”, and pushed the update to complete the merge.
+
